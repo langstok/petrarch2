@@ -41,7 +41,7 @@ import os
 import logging
 #import corenlp
 import dateutil.parser
-import PETRglobals
+from petrarch2 import PETRglobals
 from collections import defaultdict, Counter
 
 nulllist = []  # used when PETRglobals.NullVerbs == True

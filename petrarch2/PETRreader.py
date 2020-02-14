@@ -53,8 +53,8 @@ try:
 except ImportError:
     from configparser import ConfigParser
 
-import PETRglobals
-import utilities
+from petrarch2 import PETRglobals
+from petrarch2 import utilities
 
 
 # ================== STRINGS ================== #
@@ -740,7 +740,7 @@ def read_verb_dictionary(verb_path):
         '''
         segs = line.split()
         # print(line)
-        syns = filter(lambda a: '&' in a, segs)
+        syns = list(filter(lambda a: '&' in a, segs))
         lines = []
         if syns:
             set = syns[0].replace(
@@ -818,7 +818,7 @@ def read_verb_dictionary(verb_path):
                     zip(prepstarts, prepends))
         prep_pats = []
         for phrase in preps:
-            phrase = map(lambda a: a.replace("(", "").replace(")", ""), phrase)
+            phrase = list(map(lambda a: a.replace("(", "").replace(")", ""), phrase))
             p = phrase[0]
             pnps = []
             pmodifiers = []

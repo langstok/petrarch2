@@ -4,10 +4,10 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 
-import PETRglobals
-import PETRreader
+from petrarch2 import PETRglobals
+from petrarch2 import PETRreader
 import time
-import utilities
+from petrarch2 import utilities
 import types
 import logging
 

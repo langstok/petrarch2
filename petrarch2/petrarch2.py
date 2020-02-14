@@ -48,11 +48,11 @@ import argparse
 # 20-Nov-14:	write_actor_root/text added to parse_Config
 # ------------------------------------------------------------------------
 
-import PETRglobals  # global variables
-import PETRreader  # input routines
-import PETRwriter
-import utilities
-import PETRtree
+from petrarch2 import PETRglobals  # global variables
+from petrarch2 import PETRreader  # input routines
+from petrarch2 import PETRwriter
+from petrarch2 import utilities
+from petrarch2 import PETRtree
 
 
 # ========================== VALIDATION FUNCTIONS ========================== #
